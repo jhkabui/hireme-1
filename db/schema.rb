@@ -26,17 +26,6 @@ ActiveRecord::Schema.define(version: 2020_03_03_101453) do
     t.index ["user_id"], name: "index_applications_on_user_id"
   end
 
-  create_table "companies", force: :cascade do |t|
-    t.string "name"
-    t.text "adress"
-    t.string "telephone"
-    t.string "location"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_companies_on_user_id"
-  end
-
   create_table "interviews", force: :cascade do |t|
     t.string "time"
     t.datetime "created_at", null: false
@@ -51,12 +40,10 @@ ActiveRecord::Schema.define(version: 2020_03_03_101453) do
     t.text "description"
     t.string "category"
     t.text "requirement"
-    t.bigint "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "application_id"
     t.index ["application_id"], name: "index_jobs_on_application_id"
-    t.index ["company_id"], name: "index_jobs_on_company_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,8 +65,6 @@ ActiveRecord::Schema.define(version: 2020_03_03_101453) do
   end
 
   add_foreign_key "applications", "users"
-  add_foreign_key "companies", "users"
   add_foreign_key "interviews", "applications"
   add_foreign_key "jobs", "applications"
-  add_foreign_key "jobs", "companies"
 end
