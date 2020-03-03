@@ -15,4 +15,8 @@ class PagesController < ApplicationController
   	end
   	@job_categories = @job_categories.uniq
   end
+
+  def dashboard
+    @jobs = Job.all
+  end
 end
