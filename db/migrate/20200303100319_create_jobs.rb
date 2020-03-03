@@ -6,7 +6,6 @@ class CreateJobs < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :category
       t.text :requirement
-      t.references :company, foreign_key: true
 
       t.timestamps
     end
