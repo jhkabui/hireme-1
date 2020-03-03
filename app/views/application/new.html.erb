@@ -1,0 +1,14 @@
+<%= render 'shared/navbar' %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/3759059/pexels-photo-3759059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+<%= form_for @application, url: application_index_path do |f| %>
+  <%= f.text_field :letter_of_motivation %>
+  <%= f.submit "submit", class: "btn btn-primary" %>
+<% end %>
