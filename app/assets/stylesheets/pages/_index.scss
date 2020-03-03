@@ -1,2 +1,28 @@
-// Import page-specific CSS files here.
 @import "home";
+
+.card-deck {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.results {
+  width:100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+p {
+  font-weight: 400;
+  font-size: 16;
+  padding: 0;
+}
+
+.card-img-top {
+  height:200px;
+  background-size: cover;
+  background-position: center;
+}
