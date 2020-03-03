@@ -4,3 +4,4 @@ class AddRelationsToInterview < ActiveRecord::Migration[5.2]
     add_reference :jobs, :application, foreign_key: true
   end
 end
+
