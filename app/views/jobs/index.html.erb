@@ -6,8 +6,11 @@
 </div>
 
 <div class="container col-md-10 mt-3">
-  <h4 class="mb-3"><%=@jobs.length%> Jobs match your search </h4>
-
+  <% if @jobs.length == nil %>
+    <p> No Jobs match your search </p>
+  <% else %>
+    <h4 class="mb-3"><%=@jobs.length%> Jobs match your search </h4>
+  <% end %>
   <div class="card-deck">
     <% @jobs.each do |job| %>
     <div class="card mb-4 pt-4">
