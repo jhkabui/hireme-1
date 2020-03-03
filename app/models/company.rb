@@ -1,3 +1,6 @@
 class Company < ApplicationRecord
-  belongs_to :user
+  attr_reader :name
+  def initialize
+    @name = "Zalando"
+  end
 end
