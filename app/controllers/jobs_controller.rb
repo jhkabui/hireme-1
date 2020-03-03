@@ -2,11 +2,9 @@ class JobsController < ApplicationController
 
   def index
     @jobs = Job.all
-  	# if params[:query].present?
-  	#   @jobs = Job.where("title ILIKE ?", "%#{params[:query]}%")
-   #  else
-   #    @jobs = Job.all
-   #  end
+    @jobs = @jobs.where(category: params[:category]) if params[:category].present?
+    @jobs = @jobs.where(location: params[:category]) if params[:location].present?
+    @jobs = @jobs.where("title ILIKE ?", "%#{params[:job_name]}%") if params[:job_name].present?
   end
 
   def show
