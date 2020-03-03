@@ -73,7 +73,7 @@ job4 = Job.create!(
     You analyze large data sets & our customer lifecycle to identify direct mail marketing opportunities that drive user engagement and you proof your hypotheses through A/B testing
     You are the key interface for projects in order to facilitate the direct mail marketing strategies with internal & external stakeholders
     You are using confidently technologies and tools and contribute to the development of new technical solutions and trends.",
-  category: "marketing",
+  category: "Marketing",
   requirement:"You have 2+ years of experience in a customer-facing offline marketing or e-commerce role and a degree in economics for similar fields.
     You have an analytical mindset and urge data-driven decision-making.
     You speak English and German fluently, both written and verbally.
@@ -89,7 +89,7 @@ job5 = Job.create!(
     Steer our local media agencies to ensure the best possible (bad-ass) campaign execution together with Marketing Lead.
     Localize and execute global and local campaigns across all relevant touchpoints including paid media and own channels in collaboration with the relevant teams (e.g. central Marketing Strategy & Campaign team, Marketing Controlling and retail). Develop and implement additional local marketing activities, discover insights and sources of growth to support the overall strategy.
     Act as the guardian of the Zalando brand by ensuring consistency in communication (tone of voice) across the different touchpoints together with a local copywriter (direct report).",
-  category: "marketing",
+  category: "Marketing",
   requirement:"Degree in Business Administration or Marketing and strong understanding of the various Offline and Online Marketing Channels with focus on strategic media planning and buying. 3-4 years of professional experience with Marketing (preferably within fashion and/or e-Commerce)"
   )
 
@@ -101,7 +101,7 @@ job6 = Job.create!(
     Deliver high quality software by paying strong attention to API design, automated tests, scalability and resilience
     Be responsible of shaping a scalable and performant architecture of the systems that you will be working on
     Proactively mentor, share knowledge and learn from your peers.",
-  category: "marketing",
+  category: "Marketing",
   requirement:"5+ years of experience working in agile cross-functional teams; experience with at least 3 different programming languages. Scala, React and Python are a plus. Desire to learn Scala and/or React.",
   )
 
@@ -161,7 +161,7 @@ Establish basic processes for improving compliance of financial processes
 Support the operational teams and management with ad-hoc analysis to enable a sustainable yet aggressive growth strategy
 Gather and analyze relevant data autonomously within our Data Warehouse environment, and partner up with our BI team to create and maintain metrics, attributes, with both financial and operational focus, to contribute to performance improvement and quality assessments
 Build collaboration with the business, central finance functions, logistics controlling and BI for improving process and enhancing the usage of available systems (e.g.: Micro Strategy and SAP)",
-    category:"finance",
+    category:"Finance",
     requirement: "You have successfully completed a university degree in the field of Business Administration, Logistics or Industrial Engineering and Management
 You have already gained professional experience in controlling and financial planning & appraisal, ideally in supply chain and e-commerce environment with both an operational and financial focus 
 You are a can-do person, and taking ownership for the initiatives you drive
@@ -179,7 +179,7 @@ job12 = Job.create!(
 You are responsible for creating meaningful and useful dashboards and KPIs for the Finance organization to use as a base for decision making
 You dive deep in the process data of multiple finance teams to understand patterns, trace defect areas, process improvement opportunities as well as root cause drivers in order to scope future state solutions, influence roadmap decisions and measure the effectiveness of the same 
 You own and drive projects autonomously in order to implement new business activities, processes and technical solutions aiming  to reduce operating expenses, increase free cash flow and improve the experience of your internal customers",
-  category: "finance",
+  category: "Finance",
   requirement:"You have successfully completed your studies with an Accounting and/or Finance background. 
 You bring at least 3-5 years of experience in managing ERP and/or BI implementation projects. You understand how ERP and BI software works in general and are familiar with use cases in the area of Finance, including Accounting and Controlling
 Experience at managing, negotiating and working with a diverse level of seniority and subject matter expertise is essential.
