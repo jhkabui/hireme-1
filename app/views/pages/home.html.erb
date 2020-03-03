@@ -1,2 +1,30 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+  <div class="container">
+    <h1>Apply for a job at 'Le Wagon'</h1>
+    <p>Experience the<strong> most transparent</strong> hiring experience!</p>
+    <div class="row align-items-center">
+      <div class="col-md-3">
+        <%= form_tag jobs_path, method: :get do %>
+        <%= text_field_tag :job_name,
+          params[:query],
+          class: "form-control",
+          placeholder: "Enter job title" %>
+    	</div>
+    	<div class="col-md-1 mr-4">
+        <%= select(:query, :city, @job_cities, prompt: "City") %>
+    	</div>
+    	<div class="col-md-3">
+        <%= select(:query, :department, @job_categories, prompt: "Department") %>
+    	</div>
+      <div class="col-md-2">
+        <%= submit_tag "Search", class: "btn" %>
+      </div>
+      <% end %>
+  	</div>
+	</div>
+</div>
+
+<div class="container mt-4">
+	<h1>Our latest jobs:</h1>
+</div>
+
