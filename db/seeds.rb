@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Job.destroy_all
+Application.destroy_all
 User.destroy_all
 
 job1 = Job.create!(
@@ -204,4 +205,10 @@ application1 = Application.create!(
   job_id: job11.id,
   user_id: user1.id,
   status: "pending"
+)
+
+application2 = Application.create!(
+  job_id: job12.id,
+  user_id: user1.id,
+  status: "confirmed"
 )

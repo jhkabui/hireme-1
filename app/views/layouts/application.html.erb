@@ -10,12 +10,16 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <div class="content">
-      <%= render 'shared/flashes' %>
-      <%= yield %>
-      <%= javascript_include_tag 'application' %>
-      <%= javascript_pack_tag 'application' %>
-    </div>
+    <% if content_for?(:navbar) %>
+      <%= yield :navbar %>
+    <% else %>
+      <%= render 'shared/navbar' %>
+    <% end %>
+    <%= render 'shared/flashes' %>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+
     <%= render 'shared/footer' %>
     </body>
 </html>
