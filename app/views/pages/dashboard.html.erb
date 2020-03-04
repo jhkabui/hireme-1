@@ -6,27 +6,16 @@
   </div>
 </div>
 
+<% @applications.each do |application|  %>
 
 <div class="card">
-  <img src='https://res.cloudinary.com/dslkfpryg/image/upload/v1583252344/Capture_d_e%CC%81cran_2020-03-03_a%CC%80_17.18.14_by2qav.png' class="avatar-large" />
+  <h1><%= application.job.title  %></h1>
+  <img src='' class="avatar-large" />
   <div class="notification-content">
-    <p><small> Head of Engineering - Digital Experience Platform</small></p>
-    <p>To see the progress on your application, look at your left  </p>
-
+  <p><%= application.status %></p>
   </div>
-
-  <div class="notification-actions">
 </div>
 
-<div class="card">
- <img src='https://res.cloudinary.com/dslkfpryg/image/upload/v1583252344/Capture_d_e%CC%81cran_2020-03-03_a%CC%80_17.18.14_by2qav.png' class="avatar-large" />
-  <div class="notification-content">
-    <p><small> Technologie und UX / UI Design</small></p>
-    <p>To see the progress on your application, look at your left </p>
-  </div>
-
-
-</div>
-
+<% end %>
 
 
