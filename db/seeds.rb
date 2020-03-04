@@ -47,7 +47,7 @@ Fluent and effective communication and ability to understand business requiremen
 job3 = Job.create!(
   title: "Director of Design",
   location: "Berlin",
-  description: "The core of Zalando's digital experience is delivered by a set of 4 design teams, which you would lead in this role. Each team is responsible for a related set of customer experience themes and promises. We want to ensure our customers are offered a flawless choice for a complete wardrobe, the best inspiration and advice across different occasions and stages of life, a tailored experience based on personal interests and engagement, a seamless and convenient experience with time saving features and services, and an experience they can trust, in terms of protecting the data they share, but also around the quality and safety of our merchandise, and our continuing journey on recognising the social and environmental impact fashion has,  working on our goal to become an increasingly sustainable platform. 
+  description: "The core of Zalando's digital experience is delivered by a set of 4 design teams, which you would lead in this role. Each team is responsible for a related set of customer experience themes and promises. We want to ensure our customers are offered a flawless choice for a complete wardrobe, the best inspiration and advice across different occasions and stages of life, a tailored experience based on personal interests and engagement, a seamless and convenient experience with time saving features and services, and an experience they can trust, in terms of protecting the data they share, but also around the quality and safety of our merchandise, and our continuing journey on recognising the social and environmental impact fashion has,  working on our goal to become an increasingly sustainable platform.
 As Director of Product Design, you will ensure that each of our  27 million + customers feel like we take them personally by the hand on their fashion journey, from start to finish. Shoppers will find a relevant and inspiring store, filled with an assortment of products. Zalando will be their preferred fashion destination because we provide both inspiration and function, both joy-of-use and ease-of-use. Brands will love that we present their products in the best light — ways they couldn't on their own — and that we connect them in meaningful ways with consumers, making Zalando their most trusted partner.
 This position is within our Digital Experience business unit and reports to our SVP of Product Design.
 You will lead the design teams embedded into our 4 customer experience pillars.  In close collaboration with other designers (in pillar-crossing programs, the Studio and the design system) plus user researchers, product managers, engineering managers and data scientists, your teams will deliver best-in-class user experiences around topics like personalization, customization, your account, personal style and fit, and favourite brands.
@@ -58,7 +58,7 @@ Implement the most effective team set-up, considering  levels of seniority, ensu
 ",
   category: "Technology and UX / UI Design",
 requirement: "To land this job, you will show and explain raw artifacts from your work defining product design strategy, executing tactically in a complex environment and leading people to perform at their best.
-You are a seasoned design professional with in-house design leadership experience. You may have led larger teams before, but you're inspired to dive deep with a lean team to solve truly meaningful problems that make customers feel like we understand them. 
+You are a seasoned design professional with in-house design leadership experience. You may have led larger teams before, but you're inspired to dive deep with a lean team to solve truly meaningful problems that make customers feel like we understand them.
 You have the mindset and methodologies to understand your customers, colleagues and employees. Leading by example. you make us all better.
 A role model and design voice of the business. You bring not just users but also stakeholders and employees on a journey of increasing engagement by explaining a clear customer experience vision and telling compelling stories.
 Since you will lead design teams in Dublin and Berlin, some travel will be required; either city can be your home base — your choice.
@@ -157,13 +157,13 @@ job11 = Job.create!(
   location: "Berlin",
   description: "Develop and maintain reports for the accurate and timely delivery of core finance controlling processes: invoicing, pricing update, monthly closing, regular performance management, annual planning
 Together with Zalando Controlling teams, develop expertise in the cost structure of global Zalando logistics and ZFS specifics contained
-Establish basic processes for improving compliance of financial processes 
+Establish basic processes for improving compliance of financial processes
 Support the operational teams and management with ad-hoc analysis to enable a sustainable yet aggressive growth strategy
 Gather and analyze relevant data autonomously within our Data Warehouse environment, and partner up with our BI team to create and maintain metrics, attributes, with both financial and operational focus, to contribute to performance improvement and quality assessments
 Build collaboration with the business, central finance functions, logistics controlling and BI for improving process and enhancing the usage of available systems (e.g.: Micro Strategy and SAP)",
     category:"Finance",
     requirement: "You have successfully completed a university degree in the field of Business Administration, Logistics or Industrial Engineering and Management
-You have already gained professional experience in controlling and financial planning & appraisal, ideally in supply chain and e-commerce environment with both an operational and financial focus 
+You have already gained professional experience in controlling and financial planning & appraisal, ideally in supply chain and e-commerce environment with both an operational and financial focus
 You are a can-do person, and taking ownership for the initiatives you drive
 You are deeply interested in Logistics and the various processes that drives it in the background
 Excellence in analytic thinking together with the ability to grasp the 'big-picture' and at the same time dive deep into details that drives it
@@ -175,12 +175,12 @@ A strong communicator and good stakeholder management, able to partner with the 
 job12 = Job.create!(
   title: "Process Mining Manager - Finance",
   location: "Berlin",
-  description: "You analyze the processes in Finance, backed by process mining, and develop recommendations to senior stakeholders for optimizations of the same 
+  description: "You analyze the processes in Finance, backed by process mining, and develop recommendations to senior stakeholders for optimizations of the same
 You are responsible for creating meaningful and useful dashboards and KPIs for the Finance organization to use as a base for decision making
-You dive deep in the process data of multiple finance teams to understand patterns, trace defect areas, process improvement opportunities as well as root cause drivers in order to scope future state solutions, influence roadmap decisions and measure the effectiveness of the same 
+You dive deep in the process data of multiple finance teams to understand patterns, trace defect areas, process improvement opportunities as well as root cause drivers in order to scope future state solutions, influence roadmap decisions and measure the effectiveness of the same
 You own and drive projects autonomously in order to implement new business activities, processes and technical solutions aiming  to reduce operating expenses, increase free cash flow and improve the experience of your internal customers",
   category: "Finance",
-  requirement:"You have successfully completed your studies with an Accounting and/or Finance background. 
+  requirement:"You have successfully completed your studies with an Accounting and/or Finance background.
 You bring at least 3-5 years of experience in managing ERP and/or BI implementation projects. You understand how ERP and BI software works in general and are familiar with use cases in the area of Finance, including Accounting and Controlling
 Experience at managing, negotiating and working with a diverse level of seniority and subject matter expertise is essential.
 You are structured and organized yourself as well as eager to develop these skills  in others: you plan tasks and procedures carefully, set clear goals and keep track of results
@@ -199,3 +199,9 @@ user1 = User.create!(
   )
 
 puts 'seeds done'
+
+application1 = Application.create!(
+  job_id: job11.id,
+  user_id: user1.id,
+  status: "pending"
+)
