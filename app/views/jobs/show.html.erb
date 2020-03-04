@@ -1,21 +1,34 @@
-<%= render 'shared/navbar' %>
 <div>
   <div class="header_picture" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
     <h2 class="text-black text-center"><%= @job.title %></h2>
     <h3 class=" text-center"><i class="fas fa-map-marker-alt mr-3"> </i><%= @job.location %></h3>
   </div>
 </div>
-<%= link_to "Back", jobs_path, class: "btn mt-3 ml-3" %>
+<%= link_to "Back", jobs_path, class: "btn btn-secondary mt-3 ml-3" %>
 <div class="container">
-<div class="card-product">
-  <div class="card-product-infos">
+<div class="row">
+  <div class="col-md-6">
     <h3><strong>What we're looking for: </strong></h3>
     <p><%= @job.description %></p>
     <h3><strong>Qualifications: </strong></h3>
     <p><%= @job.requirement %></p>
+  </div>
+  <div class="col-md-6">
+
+   <div class="card">
+    <div class="card-body">
+      <h3 class="card-title"><strong>Overview of the Application Process</strong></h3>
+      <p class="card-text">Additional content.</p>
+      <a href="#" class="btn btn-secondary">More info</a>
+    </div>
 
   </div>
 </div>
+<!-- <div class="fixed-bottom"> -->
+  <div class="container-fluid">
+  <%= link_to "Apply now", new_application_path, class: "btn mt-3 w-100" %>
 </div>
+</div>
+
 
 

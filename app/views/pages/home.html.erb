@@ -24,16 +24,16 @@
 	</div>
 </div>
 <div class="container col-md-10 mt-5 mb-5">
-  <h1 class="mb-5">Our newest job openings:</h1>
+  <h1 class="mb-5">Our latest job openings:</h1>
   <div class="card-deck-home">
     <% @jobs.last(3).each do |job| %>
     <div class="card mr-3">
         <div class="card-body">
           <h3 class="card-title text-left"> <%= job.title %></h3>
-          <h5 class="card-text"> <%=job.location%></h5>
+          <h5 class="card-text"> <i class="fas fa-map-marker-alt mr-1"> </i><%=job.location%></h5>
           <h5> <%=job.category%> Department</h5>
           <div>
-            <%= link_to 'More Info', job_path(job), class: "btn mt-4 ml-5" %>
+            <%= link_to 'More Info', job_path(job), class: "btn mt-4" %>
           </div>
         </div>
       </div>
@@ -41,3 +41,6 @@
     </div>
   </div>
 </div>
+<% content_for :navbar do %>
+<div class="no-nav"></div>
+<% end %>

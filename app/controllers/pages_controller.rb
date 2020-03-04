@@ -9,14 +9,13 @@ class PagesController < ApplicationController
   	end
   	@job_cities = @job_cities.uniq
 
-
   	@job_categories = []
   	Job.all.each do |job|
   		@job_categories << job.category
   	end
   	@job_categories = @job_categories.uniq
   end
-
+  
   def dashboard
     @jobs = Job.all
   end

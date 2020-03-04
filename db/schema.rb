@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2020_03_04_141753) do
     t.text "letter_of_motivation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "job_id"
+    t.index ["job_id"], name: "index_applications_on_job_id"
     t.index ["user_id"], name: "index_applications_on_user_id"
   end
 
