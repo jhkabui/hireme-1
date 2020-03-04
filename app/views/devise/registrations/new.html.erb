@@ -6,6 +6,15 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
+        <div class="flex-fill row justify-content-between ml-0 mr-0">
+          <div class="flex-fill bd-highlight w-50 pr-3"> <%= f.input :first_name %> </div>
+          <div class="flex-fill bd-highlight w-50 pl-3"> <%= f.input :last_name %> </div>
+        </div>
+        <div class="flex-fill row justify-content-between ml-0 mr-0">
+          <div class="flex-fill bd-highlight mr-2"> <%= f.input :telephone %> </div>
+          <div class="flex-fill bd-highlight ml-3"> <%= f.input :grade_point_average %> </div>
+          <div class="flex-fill bd-highlight ml-4"> <%= f.input :highest_education_attained %> </div>
+        </div>
         <%= f.input :email,
                     required: true,
                     autofocus: true,
@@ -18,7 +27,7 @@
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
       </div>
-
+      <%= f.input :cv, as: :file %>
       <div class="form-actions">
         <%= f.button :submit, "Sign up", class: "btn btn-gradient w-20" %>
       </div>
