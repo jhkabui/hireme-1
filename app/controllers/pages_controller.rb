@@ -21,17 +21,17 @@ class PagesController < ApplicationController
     @jobs = Job.all
   end
 
-  def edit
-  end
+  # def edit
+  # end
 
-  def update
-    @user.update(profile_params)
-    if @user.save
-      redirect_to profile_show_path
-    else
-      render 'edit'
-    end
-  end
+  # def update
+  #   @user.update(profile_params)
+  #   if @user.save
+  #     redirect_to profile_show_path
+  #   else
+  #     render 'edit'
+  #   end
+  # end
 
   def show
   end
