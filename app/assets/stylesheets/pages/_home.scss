@@ -1,7 +1,19 @@
 // Specific CSS for your home-page
 #query_department {
-  height: 38px
+  height: 38px;
+  background-color: white
 }
 #query_city{
-  height: 38px
+  height: 38px;
+  background-color: white
+}
+
+.card-deck-home {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-title {
+  text-align: center;
 }
