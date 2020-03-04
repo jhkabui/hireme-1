@@ -1,4 +1,3 @@
-<%= render 'shared/navbar' %>
 <div class="row mt-4">
 <%= link_to "Back" , jobs_path, class: "btn btn-secondary w-20 h-25 ml-5 mr-0 mt-3"%>
   <div class="container p-3 w-100 ml-4">
@@ -13,7 +12,7 @@
         <p><i class="fas fa-file mr-3"></i><%=@user.grade_point_average %> </p>
         <p><i class="fas fa-graduation-cap mr-2"></i><%=@user.highest_education_attained %> </p>
       </div>
-      <%= link_to 'Edit Profile', profile_edit_path, class: "btn h-100 mr-0" %>
+      <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn h-100 mr-0" %>
     </div>
   </div>
 </div>
