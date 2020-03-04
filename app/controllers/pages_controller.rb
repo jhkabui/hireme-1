@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
+    @jobs = Job.all
   	@job_cities = []
   	Job.all.each do |job|
   		@job_cities << job.location

@@ -1,6 +1,7 @@
 class JobsController < ApplicationController
 
   def index
+
     @jobs = Job.all
     @jobs = @jobs.where(category: params[:category]) if params[:category].present?
     @jobs = @jobs.where(location: params[:category]) if params[:location].present?

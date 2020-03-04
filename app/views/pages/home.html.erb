@@ -1,8 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
-  <div class="container">
+  <div class="container col-md-10">
     <h1>Apply for a job at 'Le Wagon'</h1>
     <p>Experience the<strong> most transparent</strong> hiring experience!</p>
-    <div class="row align-items-center">
+    <div class="row">
       <div class="col-md-3">
         <%= form_tag jobs_path, method: :get do %>
         <%= text_field_tag :job_name,
@@ -23,8 +23,21 @@
   	</div>
 	</div>
 </div>
-
-<div class="container mt-4">
-	<h1>Our latest jobs:</h1>
+<div class="container col-md-10 mt-5 mb-5">
+  <h1 class="mb-5">Our newest job openings:</h1>
+  <div class="card-deck-home">
+    <% @jobs.last(3).each do |job| %>
+    <div class="card mr-3">
+        <div class="card-body">
+          <h3 class="card-title text-left"> <%= job.title %></h3>
+          <h5 class="card-text"> <%=job.location%></h5>
+          <h5> <%=job.category%> Department</h5>
+          <div>
+            <%= link_to 'More Info', job_path(job), class: "btn mt-4 ml-5" %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
-
