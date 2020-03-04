@@ -1,10 +1,28 @@
-<div class="header_picture" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/3759059/pexels-photo-3759059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
-  <div class="container">
-    <h1>Your <strong>Application Form</strong>!</h1>
+<div class="header_picture h-100" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/3759059/pexels-photo-3759059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <h1 class="text-black text-center text-white pb-5">Apply now for: <br> <%= @job.title %></h1>
+</div>
+<div class="container col-md-10">
+  <div class="header mt-3 mb-3">
+    <h2>This data will be shared from your profile:</h2>
+    <div class="card bg-white pb-3 pt-4 p-3 rounded">
+      <div class="flex-fill row justify-content-between ml-0 mr-0">
+        <div class="flex-fill bd-highlight w-50 mb-2 pl-2"><h5>Name: <%=@user.first_name %> <%=@user.last_name %></h5></div>
+        <div class="flex-fill bd-highlight w-50 mb-2 pl-5"><h5>Highest Level of Education: <%=@user.highest_education_attained %></h5></div>
+      </div>
+      <div class="flex-fill row justify-content-between ml-0 mr-0">
+        <div class="flex-fill bd-highlight w-50 mb-2 pl-2"><h5>E-Mail: <%=@user.email %> </h5></div>
+        <div class="flex-fill bd-highlight w-50 mb-2 pl-5"><h5>GPA: <%=@user.grade_point_average %> </h5></div>
+      </div>
+      <div class="flex-fill row justify-content-between ml-0 mr-0">
+        <div class="flex-fill bd-highlight w-50 mb-2 pl-2"><h5>Phone: <%=@user.telephone %> </h5></div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5">
+    <h2>Please attach a letter of motivation to your application:</h2>
+    <%= simple_form_for [@job, @application] do |f| %>
+      <%= f.input :letter_of_motivation %>
+      <%= f.button :submit, "Send Application", class: "btn w-100 mt-3 p-2 rounded"%>
+    <% end %>
   </div>
 </div>
-
-<%= simple_form_for [@job, @application] do |f| %>
-  <%= f.input :letter_of_motivation %>
-  <%= f.button :submit %>
-<% end %>
