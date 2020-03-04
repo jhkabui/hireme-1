@@ -4,8 +4,26 @@
     <h2 class="text-black text-center text-white">Find your next Job</h2>
   </div>
 </div>
-
 <div class="container col-md-10 mt-3">
+  <div class="row mb-4 mt-4 ml-3">
+    <div class="col-md-4 ml-5 mr-2">
+      <%= form_tag jobs_path, method: :get do %>
+      <%= text_field_tag :job_name,
+        params[:query],
+        class: "form-control",
+        placeholder: "Enter job title" %>
+    </div>
+    <div class="col-md-1 ml-3 mr-5">
+      <%= select(:query, :city, @job_cities, prompt: "City") %>
+    </div>
+    <div class="col-md-3 mr-3">
+      <%= select(:query, :department, @job_categories, prompt: "Department") %>
+    </div>
+    <div class="col-md-2 ml-4">
+      <%= submit_tag "Search", class: "btn" %>
+    </div>
+    <% end %>
+  </div>
   <% if @jobs.length == nil %>
     <p> No Jobs match your search </p>
   <% else %>
