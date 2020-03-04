@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<%= form_for @application, url: application_index_path do |f| %>
-  <%= f.text_field :letter_of_motivation %>
-  <%= f.submit "submit", class: "btn btn-primary" %>
+<%= simple_form_for [@job, @application] do |f| %>
+  <%= f.input :letter_of_motivation %>
+  <%= f.button :submit %>
 <% end %>

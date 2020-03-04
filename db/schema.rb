@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_03_04_141753) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -76,6 +77,7 @@ ActiveRecord::Schema.define(version: 2020_03_04_141753) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "applications", "jobs"
   add_foreign_key "applications", "users"
   add_foreign_key "interviews", "applications"
   add_foreign_key "jobs", "applications"
