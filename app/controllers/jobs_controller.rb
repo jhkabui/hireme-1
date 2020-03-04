@@ -1,6 +1,18 @@
 class JobsController < ApplicationController
 
   def index
+    @jobs = Job.all
+    @job_cities = []
+    Job.all.each do |job|
+      @job_cities << job.location
+    end
+    @job_cities = @job_cities.uniq
+
+    @job_categories = []
+    Job.all.each do |job|
+      @job_categories << job.category
+    end
+    @job_categories = @job_categories.uniq
 
     @jobs = Job.all
     @jobs = @jobs.where(category: params[:category]) if params[:category].present?

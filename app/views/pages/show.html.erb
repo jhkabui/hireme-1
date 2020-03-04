@@ -1,0 +1,19 @@
+<%= render 'shared/navbar' %>
+<div class="row mt-4">
+<%= link_to "Back" , jobs_path, class: "btn btn-secondary w-20 h-25 ml-5 mr-0 mt-3"%>
+  <div class="container p-3 w-100 ml-4">
+    <div class="card p-5">
+      <div class="col-md-12 text-justify pl-1 pr-4">
+        <div class="d-flex justify-center mr-0">
+          <h2>This is your Profile, <%=@user.first_name %></h2>
+        </div>
+        <p><i class="fas fa-user mr-3"></i><%=@user.first_name %> <%=@user.last_name %></p>
+        <p><i class="fas fa-envelope mr-3"></i><%=@user.email %> </p>
+        <p><i class="fas fa-phone mr-3"></i><%=@user.telephone %> </p>
+        <p><i class="fas fa-file mr-3"></i><%=@user.grade_point_average %> </p>
+        <p><i class="fas fa-graduation-cap mr-2"></i><%=@user.highest_education_attained %> </p>
+      </div>
+      <%= link_to 'Edit Profile', profile_edit_path, class: "btn h-100 mr-0" %>
+    </div>
+  </div>
+</div>
