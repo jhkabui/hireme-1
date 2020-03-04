@@ -8,7 +8,7 @@
       <%= text_field_tag :job_name,
         params[:query],
         class: "form-control",
-        placeholder: "Enter job title" %>
+        placeholder: "Enter job title", value: @value %>
     </div>
     <div class="col-md-1 ml-3 mr-5">
       <%= select(:query, :city, @job_cities, prompt: "City") %>

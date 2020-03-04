@@ -1,6 +1,7 @@
 class JobsController < ApplicationController
 
   def index
+    @value = params[:job_name]
     @jobs = Job.all
     @job_cities = []
     Job.all.each do |job|
