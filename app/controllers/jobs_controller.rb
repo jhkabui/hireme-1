@@ -1,7 +1,9 @@
 class JobsController < ApplicationController
 
   def index
-    @value = params[:job_name]
+    @job_name_value = params[:job_name]
+    @job_cities_value = jobs_params[:city]
+    @job_categories_value = jobs_params[:department]
     @jobs = Job.all
     @job_cities = []
     Job.all.each do |job|
@@ -16,12 +18,18 @@ class JobsController < ApplicationController
     @job_categories = @job_categories.uniq
 
     @jobs = Job.all
-    @jobs = @jobs.where(category: params[:category]) if params[:category].present?
-    @jobs = @jobs.where(location: params[:category]) if params[:location].present?
+    @jobs = @jobs.where(category: jobs_params[:department]) if jobs_params[:department].present?
+    @jobs = @jobs.where(location: jobs_params[:city]) if jobs_params[:city].present?
     @jobs = @jobs.where("title ILIKE ?", "%#{params[:job_name]}%") if params[:job_name].present?
   end
 
   def show
     @job = Job.find(params[:id])
+  end
+
+  private
+
+  def jobs_params
+    params.require(:query).permit(:city, :department)
   end
 end
