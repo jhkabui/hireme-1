@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_101453) do
+ActiveRecord::Schema.define(version: 2020_03_04_111613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2020_03_03_101453) do
     t.text "letter_of_motivation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "job_id"
+    t.index ["job_id"], name: "index_applications_on_job_id"
     t.index ["user_id"], name: "index_applications_on_user_id"
   end
 
@@ -58,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_03_03_101453) do
     t.string "last_name"
     t.string "telephone"
     t.text "cv"
+    t.text "address"
     t.float "grade_point_average"
     t.string "highest_education_attained"
     t.index ["email"], name: "index_users_on_email", unique: true
