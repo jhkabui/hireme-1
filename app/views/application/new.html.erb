@@ -22,7 +22,7 @@
     <h2>Please attach a letter of motivation to your application:</h2>
     <%= simple_form_for [@job, @application] do |f| %>
       <%= f.input :letter_of_motivation %>
-      <%= f.button :submit, "Send Application", class: "btn w-100 mt-3 p-2 rounded"%>
+      <%= f.button :submit, "Send Application", id: "sweet-alert-demo", class: "btn w-100 mt-3 p-2 rounded"%>
     <% end %>
   </div>
 </div>
