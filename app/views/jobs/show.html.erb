@@ -1,28 +1,37 @@
 <div>
   <div class="header_picture" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
-
-    <h2 class="text-black text-center"><%= @job.title %></h2>
-    <h3 class=" text-center"><i class="fas fa-map-marker-alt mr-3"> </i><%= @job.location %></h3>
-    <!-- <div class="rating">
+<%= link_to "Back", jobs_path, class: "btn btn-secondary mt-3 ml-3" %>
+    <h2 class="header-font text-white text-center"><%= @job.title %></h2>
+    <h3 class="text-center"><%= @job.category %></h3>
+    <h4 class="text-center"><i class="fas fa-map-marker-alt mr-3"> </i><%= @job.location %></h4>
+      <!-- <div class="rating">
       <i class="far fa-star" id="rating-unlock"></i>
       <i class="fas fa-star" id="rating-lock"></i>
     </div> -->
+    <div class="container-fluid text-center">
+      <%= link_to "Apply now", new_job_application_path(@job), class: "btn mt-3 apply-btn" %>
+    </div>
+
   </div>
 </div>
-<%= link_to "Back", jobs_path, class: "btn btn-secondary mt-3 ml-3" %>
-<div class="container">
-  <div class="card bg-white pb-3 pt-4 p-3 rounded">
+<div class="container mt-5">
+  <div class="pb-3 pt-4 p-3 rounded">
     <div class="row">
       <div class="col-md-6">
-        <h3><strong>What we're looking for: </strong></h3>
-        <p><%= @job.description %></p>
-        <h3><strong>Qualifications: </strong></h3>
-        <p><%= @job.requirement %></p>
+        <h3 class="section-title">What we're looking for:</h3>
+        <br>
+        <p class="application-info"><%= @job.description %></p>
       </div>
       <div class="col-md-6">
-       <div class="card">
-        <div class="card-body bg-light text-dark">
-          <h3 class="card-title"><strong>Overview of the Application Process</strong></h3>
+        <h3 class="section-title">Qualifications:</h3>
+        <br>
+        <p class="application-info"><%= @job.requirement %></p>
+      </div>
+      <div class="col-md-12">
+
+       <div class="text-center card mt-3 mb-3">
+        <div class="card-body">
+          <h3 class="section-title">Overview of the Application Process</h3>
           <p class="card-text">There are <%= Application::STATUSES.length %> steps in the application process:
             <ul class="list-group">
               <li class="list-group-item"><%= Application::STATUSES.first %></li>
@@ -36,10 +45,8 @@
       </div>
     </div>
     <!-- <div class="fixed-bottom"> -->
-    <div class="container-fluid">
-      <%= link_to "Apply now", new_job_application_path(@job), class: "btn mt-3 w-100" %>
-    </div>
   </div>
+</div>
 </div>
 
 <%= form_for(@user_job) do |f| %>
