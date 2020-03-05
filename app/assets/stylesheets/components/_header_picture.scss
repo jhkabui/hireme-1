@@ -2,15 +2,35 @@
   background-size: cover;
   background-position: center;
   padding: 100px 0;
-  height: 50px
 }
 
 .header_picture h1 {
   text-align: center;
-  color: white;
+  color: $custom-grey;
 }
 
 .header_picture p {
   text-align: center;
   color: white;
+}
+
+.header_picture {
+	h2 {
+		font-size: 2rem;
+	}
+	h4 {
+		color: $custom-grey;
+	}
+	h3 {
+		color: white;
+		font-style: italic;
+		opacity: .5;
+	}
+}
+
+.header_picture {
+	.btn-secondary {
+		position: absolute;
+		top: 72px;
+	}
 }
