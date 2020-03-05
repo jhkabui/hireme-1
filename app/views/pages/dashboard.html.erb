@@ -3,16 +3,16 @@
     <h1 style="align-items: ">Your applications status</strong>!</h1>
   </div>
 </div>
-
+<div class="container col-md-10">
 <% @applications.each do |application|  %>
 
-<div class="card">
+
   <h1><%= application.job.title  %></h1>
   <img src='' class="avatar-large" />
   <div class="notification-content">
-  <p class= "badge badge-pill badge-info"><%= application.status %></p>
+ <p class= "badge badge-pill badge-info"><%= application.status %></p>
   <p class="blockquote text-center"><%= application.status_description %></p>
-  </div>
+
 </div>
 
 <% end %>
