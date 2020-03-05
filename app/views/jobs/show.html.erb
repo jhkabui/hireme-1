@@ -19,7 +19,14 @@
        <div class="card">
         <div class="card-body">
           <h3 class="card-title"><strong>Overview of the Application Process</strong></h3>
-          <p class="card-text">Additional content.</p>
+          <p class="card-text">There are <%= Application::STATUSES.length %> steps in the application process:
+            <ul class="list-group">
+              <li class="list-group-item"><%= Application::STATUSES.first %></li>
+              <li class="list-group-item"><%= Application::STATUSES.second %></li>
+              <li class="list-group-item"><%= Application::STATUSES.third %></li>
+              <li class="list-group-item"><%= Application::STATUSES.fourth %></li>
+            </ul>
+          </p>
           <a href="#" class="btn btn-secondary">More info</a>
         </div>
       </div>
