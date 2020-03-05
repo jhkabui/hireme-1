@@ -1,7 +1,7 @@
 <div>
   <div class="header_picture" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
-    <h2 class="text-black text-center"><%= @job.title %></h2>
-    <h3 class=" text-center"><i class="fas fa-map-marker-alt mr-3"> </i><%= @job.location %></h3>
+    <h2 class="text-white text-center"><%= @job.title %></h2>
+    <h4 class="text-white text-center"><i class="fas fa-map-marker-alt mr-3"> </i><%= @job.location %></h4>
   </div>
 </div>
 <%= link_to "Back", jobs_path, class: "btn btn-secondary mt-3 ml-3" %>
