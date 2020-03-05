@@ -1,0 +1,19 @@
+#rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+#rating > i {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+#rating:hover .rating-unlock,
+#rating .rating-lock {
+  display: none;
+}
+#lock.hover .icon-lock {
+  display: inline;
+}
+#rating {
+font-size: 33px
+}

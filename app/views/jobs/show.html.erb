@@ -1,7 +1,12 @@
 <div>
   <div class="header_picture" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
-    <h2 class="text-white text-center"><%= @job.title %></h2>
-    <h4 class="text-white text-center"><i class="fas fa-map-marker-alt mr-3"> </i><%= @job.location %></h4>
+
+    <h2 class="text-black text-center"><%= @job.title %></h2>
+    <h3 class=" text-center"><i class="fas fa-map-marker-alt mr-3"> </i><%= @job.location %></h3>
+    <!-- <div class="rating">
+      <i class="far fa-star" id="rating-unlock"></i>
+      <i class="fas fa-star" id="rating-lock"></i>
+    </div> -->
   </div>
 </div>
 <%= link_to "Back", jobs_path, class: "btn btn-secondary mt-3 ml-3" %>
@@ -38,5 +43,9 @@
   </div>
 </div>
 
-
+<%= form_for(@user_job) do |f| %>
+  <%= f.text_field :user %>
+  <%= f.text_field :job %>
+  <%= f.submit %>
+<% end %>
 
