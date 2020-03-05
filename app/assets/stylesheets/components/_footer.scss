@@ -1,15 +1,15 @@
 .footer {
-  background: #F4F4F4;
+  background: #B2ADAD;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
-  padding: 8px 16px;
+  height: 80px;
+  padding: 16px 8px 16px 5px;
   color: rgba(0,0,0,0.3);
   font-weight: 600;
   position: absolute;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .footer-links {
   display: flex;
@@ -30,7 +30,4 @@
 }
 .content {
   min-height: calc(100vh - 170px);
-}
-.footer {
-  height: 50px;
 }

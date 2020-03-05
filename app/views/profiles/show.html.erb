@@ -1,3 +1,6 @@
+<div class="header_picture h-25" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+  <h2 class="text-black text-center text-white">Find your next Job</h2>
+</div>
 <div class="row mt-4">
 <%= link_to "Back", jobs_path, class: "btn btn-secondary w-20 h-25 ml-5 mr-0 mt-3"%>
   <div class="container p-3 w-100 ml-4">
@@ -8,17 +11,17 @@
         </div>
         <div class="flex-fill row justify-content-between ml-0 mr-0">
           <div class="flex-fill bd-highlight w-50 mb-2 pl-2"><h5><i class="fas fa-user mr-3"></i><%=@user.first_name %> <%=@user.last_name %></h5></div>
-          <div class="flex-fill bd-highlight w-50 mb-2 pl-5"><h5><i class="fas fa-graduation-cap mr-2"></i><%=@user.highest_education_attained %> </h5></div>
         </div>
         <div class="flex-fill row justify-content-between ml-0 mr-0">
           <div class="flex-fill bd-highlight w-50 mb-2 pl-2"><h5><i class="fas fa-envelope mr-3"></i><%=@user.email %> </h5></div>
-          <div class="flex-fill bd-highlight w-50 mb-2 pl-5"><h5><i class="fas fa-file mr-3"></i><%=@user.grade_point_average %> </h5></div>
+          <div class="flex-fill bd-highlight w-50 mb-2 pl-5"><h5><i class="fas fa-graduation-cap mr-2"></i><%=@user.highest_education_attained %> </h5></div>
         </div>
         <div class="flex-fill row justify-content-between ml-0 mr-0">
           <div class="flex-fill bd-highlight w-50 mb-2 pl-2"><h5><i class="fas fa-phone mr-3"></i><%=@user.telephone %> </h5></div>
+          <div class="flex-fill bd-highlight w-50 mb-2 pl-5"><h5><i class="fas fa-file mr-3"></i><%=@user.grade_point_average %> </h5></div>
         </div>
       </div>
-      <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn h-100 mr-0" %>
+      <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn h-100 mr-0 mt-5" %>
     </div>
   </div>
 </div>
