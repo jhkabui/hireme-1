@@ -1,15 +1,15 @@
 <div>
   <div class="header_picture" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
 <%= link_to "Back", jobs_path, class: "btn btn-secondary mt-3 ml-3" %>
-    <h2 class="header-font text-white text-center"><%= @job.title %></h2>
+    <h2 class="header-font text-white text-center mt-3"><%= @job.title %></h2>
     <h3 class="text-center"><%= @job.category %></h3>
-    <h4 class="text-center"><i class="fas fa-map-marker-alt mr-3"> </i><%= @job.location %></h4>
+    <h4 class="text-center mt-4"><i class="fas fa-map-marker-alt mr-3"> </i><%= @job.location %></h4>
       <!-- <div class="rating">
       <i class="far fa-star" id="rating-unlock"></i>
       <i class="fas fa-star" id="rating-lock"></i>
     </div> -->
     <div class="container-fluid text-center">
-      <%= link_to "Apply now", new_job_application_path(@job), class: "btn mt-3 apply-btn" %>
+      <%= link_to "Apply now", new_job_application_path(@job), class: "btn mt-3 apply-btn  mb-0" %>
     </div>
 
   </div>
@@ -27,24 +27,19 @@
         <br>
         <p class="application-info"><%= @job.requirement %></p>
       </div>
-      <div class="col-md-12">
-
-       <div class="text-center card mt-3 mb-3">
-        <div class="card-body">
-          <h3 class="section-title">Overview of the Application Process</h3>
-          <p class="card-text">There are <%= Application::STATUSES.length %> steps in the application process:
-            <ul class="list-group">
-              <li class="list-group-item"><%= Application::STATUSES.first %></li>
-              <li class="list-group-item"><%= Application::STATUSES.second %></li>
-              <li class="list-group-item"><%= Application::STATUSES.third %></li>
-              <li class="list-group-item"><%= Application::STATUSES.fourth %></li>
-            </ul>
-          </p>
-          <a href="#" class="btn btn-secondary">More info</a>
-        </div>
-      </div>
+  <!-- <h3 class="section-title mt-5">The Application Process:</h3>
+  <div class="row">
+    <div class="col-md-6">
+    <ul class="text-left list-group bg-none">
+      <li class="list-group-item border-0 pl-2" style="background: none;">1. <%= Application::STATUSES.first %></li>
+      <li class="list-group-item border-0 pl-2" style="background: none;">2. <%= Application::STATUSES.second %></li>
     </div>
-    <!-- <div class="fixed-bottom"> -->
+    <div class="col-md-6">
+      <li class="list-group-item border-0 pl-2" style="background: none;">3. <%= Application::STATUSES.third %></li>
+      <li class="list-group-item border-0 pl-2" style="background: none;">4. <%= Application::STATUSES.fourth %></li>
+    </ul>
+    </div>
+  </div> -->
+    </div>
   </div>
-</div>
 </div>
