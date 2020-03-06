@@ -1,6 +1,6 @@
 <div>
   <div class="header_picture" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/3759059/pexels-photo-3759059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
-    <h2 class="header-font text-white text-center"> <%= @job.title %> </h2>
+    <h2 class="header-font text-white text-center pt-4 pb-4"> <%= @job.title %> </h2>
     <div class="container-fluid text-center">
       <%= simple_form_for [@job, @application] do |f| %>
       <%= f.button :submit, "Send Application", id: "sweet-alert-demo", class: "btn mt-3 apply-btn"%>
