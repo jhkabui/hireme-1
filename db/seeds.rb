@@ -206,10 +206,4 @@ application1 = Application.create!(
   letter_of_motivation: "Hi, I want this job please"
 )
 
-application2 = Application.create!(
-  job_id: job12.id,
-  user_id: user1.id,
-  letter_of_motivation: "Hi, I want this job please"
-)
-
 puts 'seeds done'
