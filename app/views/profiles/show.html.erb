@@ -25,5 +25,31 @@
     </div>
   </div>
 </div>
-
+<div class="container col-md-10 mt-3">
+  <% if @favorite_jobs.length == nil %>
+    <p class="section-title mt-5 mb-5"> No Jobs saved </p>
+  <% else %>
+    <h4 class="section-title mt-5 mb-5"><%=@favorite_jobs.length%> saved jobs </h4>
+  <% end %>
+    <div class="row">
+      <div class="card-deck">
+        <% @favorite_jobs.each do |job| %>
+        <div class="card mb-4 pt-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-10">
+                <h3 class="card-title text-left"> <%= job.title %></h3>
+                <h4 class="card-text"> <i class="fas fa-map-marker-alt mr-2"> </i><%=job.location%></h4>
+                <h5> <%=job.category%> Department</h5>
+              </div>
+              <div class="col-md-2">
+                <%= link_to 'More Info', job_path(job), class: "btn mt-4 ml-5" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+</div>
 <%# cl_image_tag(current_user.cv.key, :width => 200, :height => 250) %>
