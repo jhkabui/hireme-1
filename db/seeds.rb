@@ -199,16 +199,15 @@ user1 = User.create!(
   password: "123456"
   )
 
-puts 'seeds done'
 
 application1 = Application.create!(
   job_id: job11.id,
   user_id: user1.id,
-  status: "pending"
 )
 
 application2 = Application.create!(
   job_id: job12.id,
   user_id: user1.id,
-  status: "confirmed"
 )
+
+puts 'seeds done'
