@@ -1,6 +1,6 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?cs=srgb&dl=group-of-person-sitting-indoors-3184306.jpg&fm=jpg);">
+<div class="header_picture" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?cs=srgb&dl=group-of-person-sitting-indoors-3184306.jpg&fm=jpg);">
   <div class="container">
-    <h1 style="align-items: ">Your applications status</strong>!</h1>
+    <h2 class="header-font text-white text-center">Your applications status</h2>
   </div>
 </div>
 <div class="container col-md-10">
@@ -11,7 +11,7 @@
   <img src='' class="avatar-large" />
   <div class="notification-content">
  <p class= "badge badge-pill badge-info"><%= application.status %></p>
-  <p class="blockquote text-center"><%= application.status_description %></p>
+<div class="text-muted font-italic text-primary blockquote" ><%= application.status_description %></div>
 
 </div>
 
