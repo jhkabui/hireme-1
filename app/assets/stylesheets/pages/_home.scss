@@ -29,6 +29,19 @@
 	color: $custom-grey;
 }
 
+.provided_by{
+  position: absolute;
+  font-weight: 400;
+  font-size: 30px;
+  right: 25px;
+  top: 25px;
+  color: white;
+  opacity: 1;
+  .logo{
+    color: #151965;
+    font-weight: bolder;
+  }
+}
 
 .card-body {
   -ms-flex: 1 1 auto;
