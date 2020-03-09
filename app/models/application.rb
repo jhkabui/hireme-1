@@ -9,6 +9,7 @@ class Application < ApplicationRecord
   belongs_to :user
 
   has_one_attached :letter_of_motivation
+  validates :letter_of_motivation, attached: true
 
   enum status: STATUSES
 
