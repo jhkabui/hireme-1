@@ -1,16 +1,39 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+<div class="banner landing" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
   <div class="container col-md-10">
-    <h1 class="header-font">Find your new Job with <i class="hiremelogo bg-white"> HireMe!.</i></h1>
+    <h1 class="header-font mt-0">Find your new Job with <i class="hiremelogo bg-white"> HireMe!.</i></h1>
     <p>The <strong>most transparent</strong> applicant tracking system</p>
   </div>
 </div>
 
-<div class="container mt-5 mb-5">
-    <h1 class="text-center">Applicant advantages:</h1>
-  <div class="cards mr-5">
+<div class="container col-md-10 mt-5 mb-5">
+  <h1 class="text-center companies-font mb-5">Company of the week:</h1>
+  <div class="card-deck ">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+          </div>
+          <div class="col-md-8 pt-2">
+            <h3 class="card-title text-left"> Le Wagon</h3>
+            <h4 class="card-text"> <i class="fas fa-map-marker-alt mr-2"> </i>Paris, Berlin & London</h4>
+            <h5> <%=@jobs.length%> open positions</h5>
+          </div>
+          <div class="col-md-2">
+          <%= link_to "See more", lewagon_path, class:"btn btn-lw mt-5" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container col-md-10 mt-5 mb-5">
+    <h1 class="text-center mb-5">Applicant advantages:</h1>
+  <div class="cards">
     <div class="card-categoryy">
       <h1><i class="fas fa-map-marker-alt"></i> </h1>
-      <p>Find the perfect Job in your city</p>
+      <p>Find the perfect job in your city</p>
     </div>
 
     <div class="card-categoryy">
@@ -20,12 +43,12 @@
 
     <div class="card-categoryy">
       <h1><i class="fas fa-users"></i> </h1>
-      <p>Exclusive Jobs at the best tech companies</p>
+      <p>Exclusive jobs at the best tech companies</p>
     </div>
   </div>
 </div>
 <div class="container home-page mt-5 mb-5">
-  <h1 class="text-center companies-font">Companies that trust us:</h1>
+  <h1 class="text-center companies-font mb-5">Companies that trust us:</h1>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -63,6 +86,7 @@
     </a>
   </div>
 </div>
+
 <% content_for :navbar do %>
 <div class="no-nav"></div>
 <% end %>
