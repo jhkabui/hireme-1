@@ -20,6 +20,30 @@
               <div class="col-md-6">
 	          	</div>
 	            <p class="pl-3"> <%= application.status_description %></p>
+
+
+
+
+              <% if admin.user %>
+
+                       <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Application status
+                          </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"><%= Application::STATUSES.first %></a>
+                        <a class="dropdown-item" href="#"><%= Application::STATUSES.second %></a>
+                        <a class="dropdown-item" href="#"><%= Application::STATUSES.third %></a>
+                        <a class="dropdown-item" href="#"><%= Application::STATUSES.fourth %></a>
+                        </div>
+                      </div>
+                      <%  %>
+                      else
+
+                        yield
+                        <% @applications.each do |application|  %>
+                        end
+                        <% end %>
 	          	</div>
 	        	</div>
           </div>
@@ -29,3 +53,5 @@
     </div>
   </div>
 </div>
+
+
