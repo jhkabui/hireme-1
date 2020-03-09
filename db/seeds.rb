@@ -212,11 +212,9 @@ user1 = User.create!(
   password: "123456"
   )
 
-
 application1 = Application.create!(
   job_id: job11.id,
   user_id: user1.id,
-  letter_of_motivation: "Hi, I want this job please"
 )
 
 puts 'seeds done'
