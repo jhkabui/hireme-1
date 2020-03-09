@@ -1,17 +1,18 @@
 class UserJobsController < ApplicationController
-    skip_before_action :authenticate_user!, only: [:home]
-def create
-    @user_job = UserJob.new(user: User.find(user_job_params[:user]),
-                            job: Job.find(user_job_params[:job]))
+  skip_before_action :authenticate_user!, only: [:home]
 
- if @user_job.save
-  redirect_to Job.find(user_job_params[:job])
- end
+  def create
+    @user_job = UserJob.new
+    @user_job.job = Job.find(params[:job_id])
+    @user_job.user = current_user
+    if @user_job.save!
+      redirect_to @user_job.job
+    end
   end
 
-  private
-
-  def user_job_params
-    params.require(:user_job).permit(:user, :job)
+  def destroy
+    @user_job = UserJob.find_by(job_id: params[:job_id])
+    @user_job.destroy
+    redirect_to @user_job.job
   end
 end
