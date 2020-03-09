@@ -7,7 +7,8 @@ class Application < ApplicationRecord
 
   belongs_to :job
   belongs_to :user
-  validates :letter_of_motivation, presence: true
+
+  has_one_attached :letter_of_motivation
 
   enum status: STATUSES
 
