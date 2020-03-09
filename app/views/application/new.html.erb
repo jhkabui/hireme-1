@@ -9,7 +9,10 @@
   <div class="container col-md-10">
     <div class="mt-5">
       <h2 class="section-title">Please attach a letter of motivation to your application:</h2>
-        <%= f.input :letter_of_motivation %>
+
+        <div class="flex-fill bd-highlight w-50 pl-3"><%= f.input :letter_of_motivation, as: :file, input_html: { accept: ".pdf" } %></div>
+      <% end %>
+
     </div>
     <h2 class="section-title mb-4 mt-5">This data will be shared from your profile:</h2>
     <div class="card bg-white pb-3 pt-4 p-3 rounded">
