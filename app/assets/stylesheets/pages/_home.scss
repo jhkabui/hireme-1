@@ -27,6 +27,15 @@
   border-radius: 4;
 }
 
+.logo_navbar{
+  position: absolute;
+  font-weight: 700;
+  font-size: 30px;
+  color: $hire-me-blue;
+  padding-top: 0;
+  text-align: center;
+}
+
 .carousel-caption{
   background-color: black;
   opacity: 0.8;
