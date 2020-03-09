@@ -27,7 +27,7 @@
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
       </div>
-      <%= f.input :cv, as: :file %>
+      <%= f.input :cv, as: :file, input_html: { accept: ".pdf" } %>
       <div class="form-actions">
         <%= f.button :submit, "Sign up", class: "btn btn-gradient w-20" %>
       </div>
