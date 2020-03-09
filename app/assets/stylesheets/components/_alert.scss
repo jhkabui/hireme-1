@@ -4,3 +4,15 @@
   right: 16px;
   z-index: 1000;
 }
+
+.swal-button {
+  background-color: #E94F47;
+  color: white;
+  border-radius:4;
+  border-style: none;
+  &:not([disabled]):hover{
+	background-color: #FF7878;
+	opacity: 0.9;
+	color: white
+  }
+}
