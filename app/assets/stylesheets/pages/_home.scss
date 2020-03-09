@@ -1,84 +1,24 @@
 // Specific CSS for your home-page
-#query_department {
-  height: 38px;
-  background-color: white
+.cards h1 {
+  color: $hire-me-blue;
+  font-size: 100px;
 }
-#query_city{
-  height: 38px;
-  background-color: white
-}
-
-.card-deck-home {
-  flex-grow: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.card-title {
-  text-align: center;
-}
-
-.banner h1, .header-font {
-	font-size: 3rem;
-	font-family: $new-font;
-	margin-bottom: 20px;
-}
-
-.section-title {
-	font-size: 1.5rem;
-	color: $custom-grey;
-}
-
-.provided_by{
-  position: absolute;
-  font-weight: 400;
+.cards p {
+  opacity: 0.7;
   font-size: 30px;
-  right: 25px;
-  top: 25px;
-  color: white;
-  opacity: 1;
-  .logo{
-    color: #151965;
-    font-weight: bolder;
-  }
 }
 
-.card-body {
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 1px;
-  padding: 1.25rem;
-  h5 {
-  	font-style: italic;
-  	color: $custom-grey;
-  	opacity: .5;
-  }
-  .card-text {
-    color: $custom-grey;
-  }
+.card-categoryy {
+  text-align: center;
+  margin: 20px 5px;
 }
 
-.highlighted-red {
-	text-shadow: none;
-	margin-left: 7px;
-   color: #fd1015;
-   background: #fae6e6;
+.companies-font h1{
+  font-size: 3rem;
+	font-family: $new-font;
+  color: $hire-me-blue;
 }
 
-.highlighted-blue {
-  color:#151965;
-  font-style: none;
-  font-weight: bolder;
-  background-color: white;
-  text-shadow:none;
- } 
-
-.btn-lw {
-	background: #fd1015;
-}
-
-.highlighted {
-    padding: 2px 15px 4px;
-    font-style: normal;
-    border-radius: 3px;
+.hiremelogo{
+	color: $hire-me-blue;
 }

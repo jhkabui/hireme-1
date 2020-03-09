@@ -9,8 +9,10 @@
   <div class="container col-md-10">
     <div class="mt-5">
       <h2 class="section-title">Please attach a letter of motivation to your application:</h2>
+
         <div class="flex-fill bd-highlight w-50 pl-3"><%= f.input :letter_of_motivation, as: :file, input_html: { accept: ".pdf" } %></div>
       <% end %>
+
     </div>
     <h2 class="section-title mb-4 mt-5">This data will be shared from your profile:</h2>
     <div class="card bg-white pb-3 pt-4 p-3 rounded">
@@ -26,5 +28,7 @@
         <div class="flex-fill bd-highlight w-50 mb-2 pl-2"><h5>Phone: <%= current_user.telephone %> </h5></div>
       </div>
     </div>
+<%= f.button :submit, "Send Application", id: "sweet-alert-demo", class: "btn mt-3 apply-btn w-100"%>
   </div>
 </div>
+<% end %>
