@@ -17,8 +17,35 @@
   font-size: 3rem;
 	font-family: $new-font;
   color: $hire-me-blue;
+  font-family: $headers-font;
 }
 
 .hiremelogo{
 	color: $hire-me-blue;
+  font-family: $headers-font;
+}
+
+.carousel-caption{
+  background-color: black;
+  opacity: 0.8;
+  margin-left:0;
+  padding-bottom: 20px;
+  margin-left: 0px;
+}
+
+h1{
+  color: $custom-grey;
+}
+
+.carousel{
+  height: 550px;
+  width: 800px;
+  margin: 0 auto;
+}
+.carousel-inner{
+  height:100%;
+}
+.carousel-item {
+  height:100%;
+  object-fit: fill;
 }
