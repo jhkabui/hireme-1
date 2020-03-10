@@ -16,7 +16,9 @@
     	      <p class="application_date"> Application date: <%= application.created_at.strftime("%b %d, %Y") %></p>
 
             <div class="col-md-10">
-              <h3 class="card-title text-left pt-0"> <%=application.job.title%></h3>
+              <h3 class="card-title text-left pt-0"><%=application.job.title%></h3>
+              <h4><strong>Applicant:  <%= application.user.last_name %>,
+                <%= application.user.first_name %></strong></h4></%>
               <div class="row">
                 <div class="col-md-6">
                   <% if application.status == 'Accepted' && current_user.admin == false %>
