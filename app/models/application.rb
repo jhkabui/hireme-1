@@ -12,6 +12,9 @@ class Application < ApplicationRecord
 
   enum status: STATUSES
 
-
+  def status_description
+    index = STATUSES.index(status)
+    return DESCRIPTIONS[index]
+  end
 
 end
