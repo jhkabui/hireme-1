@@ -23,6 +23,17 @@
 .hiremelogo{
 	color: $hire-me-blue;
   font-family: $headers-font;
+  background-color: #d6e8ff;
+  border-radius: 4;
+}
+
+.logo_navbar{
+  position: absolute;
+  font-weight: 700;
+  font-size: 30px;
+  color: $hire-me-blue;
+  padding-top: 0;
+  text-align: center;
 }
 
 .carousel-caption{
@@ -38,8 +49,8 @@ h1{
 }
 
 .carousel{
-  height: 550px;
-  width: 800px;
+  height: 650px;
+  width: 950px;
   margin: 0 auto;
 }
 .carousel-inner{

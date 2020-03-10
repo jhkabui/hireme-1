@@ -7,8 +7,8 @@ class ApplicationsController < ApplicationController
   end
 
   def create
-    @application = Application.new(application_params)
     @job = Job.find(params[:job_id])
+    @application = params[:application].present? ? Application.new(application_params) : Application.new
     @application.job = @job
     @application.user = current_user
     if @application.save
