@@ -212,9 +212,4 @@ user1 = User.create!(
   password: "123456"
   )
 
-application1 = Application.create!(
-  job_id: job11.id,
-  user_id: user1.id,
-)
-
 puts 'seeds done'
