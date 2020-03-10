@@ -23,3 +23,11 @@
 @import "pages/job";
 @import "pages/lewagon";
 
+
+canvas {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 50px;
+	left: 0;
+}

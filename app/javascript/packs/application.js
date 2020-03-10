@@ -1,5 +1,6 @@
 import "bootstrap";
 import { initSweetalert } from '../plugins/init_sweetalert';
+import { carolinConfetti } from '../plugins/init_canvas-confetti';
 
 initSweetalert({
   title: "You successfully applied!",
@@ -10,6 +11,10 @@ initSweetalert({
 });
 
 
+carolinConfetti();
+
+
+
 
 // const second_submit_button = document.getElementById("sweet-alert-demo_button");
 // if (second_submit_button){
@@ -17,5 +22,3 @@ initSweetalert({
 //     second_submit_button.classList.remove("d-none");
 //   }
 // }
-
-

@@ -6,6 +6,8 @@
 </div>
 <div class="container col-md-10 mt-3">
 
+
+
 	<% @applications.each do |application|  %>
    <div class="row">
       <div class="card-deck">
@@ -17,13 +19,15 @@
               <h3 class="card-title text-left pt-0"> <%=application.job.title%></h3>
               <div class="row">
                 <div class="col-md-6">
-  	 							<p class= "badge badge-pill text-center"><%= application.status %></p>
+                  <% if application.status == 'Accepted' && current_user.admin == false %>
+  	 							 <p class= "badge badge-pill text-center confeti"><%= application.status %></p>
+                  <% else %>
+                   <p class= "badge badge-pill text-center"><%= application.status %></p>
+                  <% end %>
   	          	</div>
 
                 <% if current_user.admin %>
                   <%= link_to "Change status", edit_job_application_path(application.job, application) %>
-
-
                 <% end %>
               </div>
               <div class="row"><p class="pl-3"> <%= application.status_description %></p></div>
