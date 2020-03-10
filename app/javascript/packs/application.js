@@ -3,7 +3,7 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 import { carolinConfetti } from '../plugins/init_canvas-confetti';
 
 initSweetalert({
-  title: "You successfully applied!",
+  title: "You have successfully applied!",
   text: "",
   icon: "success"
 }, (value) => {
