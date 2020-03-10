@@ -203,12 +203,12 @@ job12 = Job.create!(
   )
 
 user1 = User.create!(
-  first_name: "Tom",
-  last_name: "Cruise",
+  first_name: "Carolin",
+  last_name: "Janssen",
   telephone: "0172123456",
-  grade_point_average: 2.7,
+  grade_point_average: 1.0,
   highest_education_attained: "Bachelor",
-  email: "test@test.com",
+  email: "Carolin@janssen.com",
   password: "123456"
   )
 
