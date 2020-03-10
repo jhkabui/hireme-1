@@ -5,41 +5,32 @@
   </div>
 </div>
 <div class="container col-md-10 mt-3">
-  <div class="card-deck">
-	<% @applications.each do |application|  %>
-    <div class="card mb-4 pt-4">
-      <div class="card-body">
-    	<p class="application_date"> Application date: <%= application.created_at.strftime("%b %d, %Y") %></p>
-        <div class="row">
-          <div class="col-md-10">
-            <h3 class="card-title text-left pt-0"> <%=application.job.title%></h3>
-            <div class="row">
-              <div class="col-md-6">
-	 							<p class= "badge badge-pill text-center"><%= application.status %></p>
-	          	</div>
-              <div class="col-md-6">
-	          	</div>
-	            <p class="pl-3"> <%= application.status_description %></p>
-              <%  end %>
-              <% if current_user.admin %>
 
-                       <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Application status
-                          </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#"><%= Application::STATUSES.first %></a>
-                        <a class="dropdown-item" href="#"><%= Application::STATUSES.second %></a>
-                        <a class="dropdown-item" href="#"><%= Application::STATUSES.third %></a>
-                        <a class="dropdown-item" href="#"><%= Application::STATUSES.fourth %></a>
-                        </div>
-                      </div>
+	<% @applications.each do |application|  %>
+   <div class="row">
+      <div class="card-deck">
+        <div class="card mb-4 pt-4">
+          <div class="card-body">
+    	      <p class="application_date"> Application date: <%= application.created_at.strftime("%b %d, %Y") %></p>
+
+            <div class="col-md-10">
+              <h3 class="card-title text-left pt-0"> <%=application.job.title%></h3>
+              <div class="row">
+                <div class="col-md-6">
+  	 							<p class= "badge badge-pill text-center"><%= application.status %></p>
+  	          	</div>
+
+                <% if current_user.admin %>
+                  <%= link_to "Change status", edit_job_application_path(application.job, application) %>
                 <% end %>
-	          	</div>
-	        	</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  <%  end %>
 </div>
+
+
+
