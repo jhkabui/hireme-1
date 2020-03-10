@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
     @jobs = Job.all
   end
-  
+
   def lewagon
     @jobs = Job.all
   	@job_cities = []
@@ -23,5 +23,7 @@ class PagesController < ApplicationController
   def dashboard
     @jobs = Job.all
     @applications = current_user.applications
+
+
   end
 end
