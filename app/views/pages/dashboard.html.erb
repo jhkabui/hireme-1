@@ -22,8 +22,11 @@
 
                 <% if current_user.admin %>
                   <%= link_to "Change status", edit_job_application_path(application.job, application) %>
+
+
                 <% end %>
               </div>
+              <div class="row"><p class="pl-3"> <%= application.status_description %></p></div>
             </div>
           </div>
         </div>
