@@ -6,43 +6,20 @@
 </div>
 <div class="container col-md-10 mt-3">
 
+  <% if current_user.admin %>
 
+    <% @all_applications.each do |application|  %>
+        <%= render "/application/application", application: application %>
+    <%  end %>
 
-	<% @applications.each do |application|  %>
-   <div class="row">
-      <div class="card-deck">
-        <div class="card mb-4 pt-4">
-          <div class="card-body">
-    	      <p class="application_date"> Application date: <%= application.created_at.strftime("%b %d, %Y") %></p>
+  <% else %>
 
-            <div class="col-md-10">
-              <h3 class="card-title text-left pt-0"><%=application.job.title%></h3>
+    <%  @applications.each do |application|  %>
+      <%= render "/application/application", application: application %>
+    <%  end %>
 
-              <% if current_user.admin %>
-                 <h4><strong>Applicant:  <%= application.user.last_name %>, <%= application.user.first_name %></strong></h4></%>
-                <% end %>
+ <% end %>
 
-              <div class="row">
-                <div class="col-md-6">
-                  <% if application.status == 'Accepted' && current_user.admin == false %>
-  	 							 <p class= "badge badge-pill text-center confeti"><%= application.status %></p>
-                  <% else %>
-                   <p class= "badge badge-pill text-center"><%= application.status %></p>
-                  <% end %>
-  	          	</div>
-
-                <% if current_user.admin %>
-                  <%= link_to "Change status", edit_job_application_path(application.job, application) %>
-                <% end %>
-              </div>
-              <div class="row"><p class="pl-3"> <%= application.status_description %></p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <%  end %>
-</div>
 
 
 
