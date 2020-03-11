@@ -1,0 +1,12 @@
+   <%= simple_form_for [@job, @application] do |f| %>
+
+
+
+        <%= f.select :status, options_for_select(Application::STATUSES.map{|status| [status, status]}) %>
+
+
+
+     <%= f.button :submit, id: "sweet-alert-demo", class: "btn mt-3 apply-btn"%>
+
+  <% end %>
+

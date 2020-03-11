@@ -1,13 +1,18 @@
 import "bootstrap";
 import { initSweetalert } from '../plugins/init_sweetalert';
+import { carolinConfetti } from '../plugins/init_canvas-confetti';
 
 initSweetalert({
-  title: "You successfully applied!",
+  title: "You have successfully applied!",
   text: "",
   icon: "success"
 }, (value) => {
   console.log(value);
 });
+
+
+carolinConfetti();
+
 
 
 
@@ -17,5 +22,3 @@ initSweetalert({
 //     second_submit_button.classList.remove("d-none");
 //   }
 // }
-
-

@@ -8,11 +8,11 @@ Rails.application.routes.draw do
 
   resources :jobs, only: [:index, :show] do
     resources :user_jobs, only: [:create, :show, :destroy]
-    resources :applications, only: [:new, :create]
+    resources :applications, only: [:new, :create, :edit, :update]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "/progress", to: "pages#dashboard", as: "dashboard"
   get "/profile/", to: "profiles#show"
-  get "/lewagon/", to: "pages#lewagon"
+  get "/hireme/", to: "pages#hireme"
 
 end

@@ -15,5 +15,11 @@ class User < ApplicationRecord
   validates :telephone, presence: true
   validates :grade_point_average, presence: true
   validates :highest_education_attained, presence: true
+  after_create :send_welcome_email
 
+  private
+
+  def send_welcome_email
+    UserMailer.with(user: self).welcome.deliver_now
+  end
 end
