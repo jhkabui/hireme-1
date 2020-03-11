@@ -4,6 +4,7 @@ class JobsController < ApplicationController
     @jobs = Job.all
     @job_cities = []
     @job_categories = []
+
     if params[:query].present?
       @job_name_value = params[:job_name]
       @job_cities_value = jobs_params[:city]
