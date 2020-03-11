@@ -23,6 +23,7 @@ class PagesController < ApplicationController
   def dashboard
     @jobs = Job.all
     @applications = current_user.applications
+    @all_applications = Application.all
 
 
   end
