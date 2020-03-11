@@ -29,6 +29,8 @@
 <div class="container col-md-10 mt-3">
   <% if @jobs.length == nil %>
     <p class="section-title mt-5 mb-5"> No Jobs match your search </p>
+    <% elsif @jobs.length == 1 %>
+    <h4 class="section-title mt-5 mb-5"><%=@jobs.length%> Job matches your search </h4>
   <% else %>
     <h4 class="section-title mt-5 mb-5"><%=@jobs.length%> Jobs match your search </h4>
   <% end %>

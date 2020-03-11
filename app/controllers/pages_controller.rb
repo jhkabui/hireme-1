@@ -5,6 +5,10 @@ class PagesController < ApplicationController
     @jobs = Job.all
   end
 
+  def hireme
+    @jobs = Job.all
+  end
+
   def home
     @jobs = Job.all
   	@job_cities = []
