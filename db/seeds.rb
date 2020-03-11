@@ -96,7 +96,7 @@ job5 = Job.create!(
    - Localize and execute global and local campaigns across all relevant touchpoints including paid media and own channels in collaboration with the relevant teams (e.g. central Marketing Strategy & Campaign team, Marketing Controlling and retail). Develop and implement additional local marketing activities, discover insights and sources of growth to support the overall strategy.
    - Act as the guardian of the Le Wagon brand by ensuring consistency in communication (tone of voice) across the different touchpoints together with a local copywriter (direct report).",
   category: "Marketing",
-  requirement:"- Degree in Business Administration or Marketing and strong understanding of the various Offline and Online Marketing Channels with focus on strategic media planning and buying. 
+  requirement:"- Degree in Business Administration or Marketing and strong understanding of the various Offline and Online Marketing Channels with focus on strategic media planning and buying.
   - 3-4 years of professional experience with Marketing (preferably within fashion and/or e-Commerce)"
   )
 
@@ -131,7 +131,7 @@ job7 = Job.create!(
 job8 = Job.create!(
   title: "(Senior) HR Manager / Personalreferent (m/w/d)",
   location: "Paris",
-  description: "Bei Tradebyte arbeitest Du mit den ganz großen Playern der E-Commerce-Branche partnerschaftlich zusammen – von angesagten Fashion-Marken bis zu großen Online-Shops. Dabei bieten wir Dir eine offene Arbeitsstruktur und einen unvergleichlichen Team-Spirit. Wir glauben daran, dass Job und Leidenschaft vereinbar sind und bieten Dir dafür das entsprechende Umfeld. Bei ständigem Wachstum sind wir auf der Suche nach neuen Kollegen, die unsere Leidenschaft an der Arbeit teilen. Love what you do – do what you love. Werde Teil von Tradebyte, einem selbstständigen Unternehmen innerhalb der Le Wagon Gruppe! 
+  description: "Bei Tradebyte arbeitest Du mit den ganz großen Playern der E-Commerce-Branche partnerschaftlich zusammen – von angesagten Fashion-Marken bis zu großen Online-Shops. Dabei bieten wir Dir eine offene Arbeitsstruktur und einen unvergleichlichen Team-Spirit. Wir glauben daran, dass Job und Leidenschaft vereinbar sind und bieten Dir dafür das entsprechende Umfeld. Bei ständigem Wachstum sind wir auf der Suche nach neuen Kollegen, die unsere Leidenschaft an der Arbeit teilen. Love what you do – do what you love. Werde Teil von Tradebyte, einem selbstständigen Unternehmen innerhalb der Le Wagon Gruppe!
 
 - Du hast eine kaufmännische Ausbildung oder ein Studium der Betriebswirtschaft, Rechtswissenschaft oder Psychologie erfolgreich abgeschlossen
 - Du kannst bereits auf mehrjährige Berufserfahrung in einer vergleichbaren Position im Bereich Personalmanagement idealerweise mit Schwerpunkt Personal- und Organisationsentwicklung zurückgreifen
@@ -189,7 +189,7 @@ job12 = Job.create!(
   title: "Process Mining Manager - Finance",
   location: "London",
   description: "- You analyze the processes in Finance, backed by process mining, and develop recommendations to senior stakeholders for optimizations of the same
-  
+
 - You are responsible for creating meaningful and useful dashboards and KPIs for the Finance organization to use as a base for decision making
 - You dive deep in the process data of multiple finance teams to understand patterns, trace defect areas, process improvement opportunities as well as root cause drivers in order to scope future state solutions, influence roadmap decisions and measure the effectiveness of the same
 - You own and drive projects autonomously in order to implement new business activities, processes and technical solutions aiming  to reduce operating expenses, increase free cash flow and improve the experience of your internal customers",
@@ -203,18 +203,24 @@ job12 = Job.create!(
   )
 
 user1 = User.create!(
-  first_name: "Tom",
-  last_name: "Cruise",
+  first_name: "Carolin",
+  last_name: "Janssen",
   telephone: "0172123456",
-  grade_point_average: 2.7,
+  grade_point_average: 1.0,
   highest_education_attained: "Bachelor",
-  email: "test@test.com",
+  email: "Carolin@janssen.com",
   password: "123456"
   )
 
-application1 = Application.create!(
-  job_id: job11.id,
-  user_id: user1.id,
-)
+Admin = User.create!(
+  first_name: "Admin",
+  last_name: "Admin",
+  telephone: "0172123456",
+  grade_point_average: 2.7,
+  highest_education_attained: "Bachelor",
+  email: "admin@gmail.com",
+  password: "adminadmin",
+  admin: true
+  )
 
 puts 'seeds done'

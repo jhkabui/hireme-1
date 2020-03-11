@@ -18,10 +18,25 @@ class ApplicationsController < ApplicationController
     end
   end
 
+  def edit
+    @application = Application.find(params[:id])
+    @job = Job.find(params[:job_id])
+  end
+
+  def update
+    @application = Application.find(params[:id])
+    if @application.update(application_update_params)
+      redirect_to dashboard_path
+    end
+  end
   private
 
   def application_params
     params.require(:application).permit(:letter_of_motivation)
+  end
+
+  def application_update_params
+    params.require(:application).permit(:status)
   end
 
   def set_profile

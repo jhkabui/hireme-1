@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:lewagon]
 
-  def home
+  def index
     @jobs = Job.all
   end
-  
-  def lewagon
+
+  def home
     @jobs = Job.all
   	@job_cities = []
   	Job.all.each do |job|
@@ -23,5 +23,7 @@ class PagesController < ApplicationController
   def dashboard
     @jobs = Job.all
     @applications = current_user.applications
+
+
   end
 end
