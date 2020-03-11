@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Application.destroy_all
+UserJob.destroy_all
 Job.destroy_all
 User.destroy_all
 
