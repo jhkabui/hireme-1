@@ -289,6 +289,55 @@ job12 = Job.create!(
 • You have a team focus and strong communication skills (English is mandatory, German is a plus). You have excellent Excel / Google Sheets and PowerPoint / Google Slides skills. Project management certification (Prince2, PMI, Agile) is a plus."
   )
 
+job13 = Job.create!(
+  title: "Product Manager",
+  location: "Berlin",
+  description: "The Product Manager is a key role within LeWagons’s Automation department and supports project management and operations.
+• You analyze the processes in Finance, backed by process mining, and develop recommendations to senior stakeholders for optimizations of the same.
+
+• You are responsible for the Design, Specification and Management of the delivery of Warehouse Control System and Material Flow Control Systems as an integrative part of our system landscape
+
+• You test the system in simulations and test environments and make sure that the interfaces are optimally connected.
+
+• You work with various internal and external stakeholders to ensure delivery of new and exciting projects that will develop our automated logistics projects",
+  category: "Technology and UX / UI Design",
+  requirement:"• Completed studies in systems engineering, automation, logistics, information technology or another suitable field of study
+
+• At least 2 years professional experience in IT project management as a Product Owner, Product Manager or other relevant role
+
+• A significant track record of design, delivery and analysis of end to end projects
+
+• An analytical mind set with strong numeracy and analysis skills
+
+• Ability to identify, validate and select the correct course of action and prioritise potential issues, risks or opportunities
+
+• Domain experience with automation of warehouse systems and logistics is desirable"
+  )
+
+job14 = Job.create!(
+  title: "Ruby Full Stack Developer",
+  location: "Berlin",
+  description: "• You collaborate with the team to bring new product ideas from brainstorming to deployment
+
+• You will bring our products to the next level and improve it continuously with the latest technology
+
+• You are part of an agile development team in Berlin where your contribution makes a difference and can have a big impact",
+  category: "Technology and UX / UI Design",
+  requirement:"• Your proven track record with Ruby, Ruby on Rails, databases (e.g. Postgresql, Elasticsearch, Redis) and Javascript (or TypeScript) boost the product from the very first day
+
+• Software and database architecture is part of your professional background
+
+• You work well in a team and you are also able to finish projects on your own
+
+• You are a great communicator, fluent in English (German is a plus) and you enable your team to find optimal and practicable solutions by actively participating in team discussions
+
+• With your experience and your strong eye for detail, you find the balance between pragmatism and perfectionism
+
+• Your are familiar with agile development (Scrum)
+
+• Experience with React, Android and iOS App development and AWS is a plus"
+  )
+
 user1 = User.create!(
   first_name: "Carolin",
   last_name: "Janssen",
