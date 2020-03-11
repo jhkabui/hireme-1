@@ -40,29 +40,6 @@ requirement: "• Extensive experience at scale as an engineering leader with de
 • A leader who thinks big and acts fast with an eye to customer needs.",
   )
 
-job2 = Job.create!(
-  title: "Backend Engineer (Java / Scala / Kotlin) - Tech Logistics",
-  location: "Berlin",
-  description: "As an engineer in Tech Logistics, you will develop logistics systems to support the delivery of millions of items to our customers. You would be a part of one of our teams that develop systems that, for example do stock distribution across warehouses, handle receive distribution and storage of goods and returns, develop algorithms to optimize the utilization of automation and staff, or create processes to ship goods to our customers while reducing errors and improving performance of logistics centers.
-
-• Develop and execute mid- & long-term technical vision and architecture with your team, while closely collaborating with Engineering Managers to be in line with our overall tech strategy. You will support teams driving the design and implementation of applications used by our colleagues in our logistics centers, platform services, and algorithmic optimizations (such as route planning and task scheduling).
-
-• Manage your services from architecture to testing, deployment and operation in an agile environment.
-
-• Collaborate with and mentor a multi-disciplinary team of backend, frontend, and research engineers.
-
-• Facilitate communication and decision-making in your team and with other engineering teams and stakeholders.
-",
-  category: "Technology and UX / UI Design",
-requirement: "• Various levels of experience in professional programming in Java, Scala or Kotlin with expertise in microservices architecture, distributed systems, RESTful APIs and event-driven design. Knowledgeable in data structures, SQL and NoSQL, Spring/Play/Akka framework, and experience with AWS and Kubernetes.
-
-• Experience in building high-volume services in distributed systems, in delivering high quality code and knowledge of how to deploy and maintain it. Interest and knowledge in Python or similar languages are a plus.
-
-• Curiosity about algorithms, machine learning or mathematics.
-
-• Fluent and effective communication and ability to understand business requirements in an agile environment.",
-  )
-
 job3 = Job.create!(
   title: "Director of Design",
   location: "Berlin",
