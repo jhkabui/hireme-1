@@ -4,22 +4,26 @@
     <p>The <strong> most transparent</strong> hiring experience</p>
 
     <div class="row">
-      <div class="col-md-3">
-        <%= form_tag jobs_path, method: :get do %>
-        <%= text_field_tag :job_name,
-          params[:query],
-          class: "form-control",
-          placeholder: "Enter job title" %>
-    	</div>
-    	<div class="col-md-1 mr-4">
-        <%= select(:query, :city, @job_cities, prompt: "City") %>
-    	</div>
-    	<div class="col-md-3">
-        <%= select(:query, :department, @job_categories, prompt: "Department") %>
-    	</div>
-      <div class="col-md-2 ml-0">
-        <%= submit_tag "Find Your Dream Job", class: "btn btn-lw" %>
-      </div>
+      <%= form_tag jobs_path, method: :get, id: "home-form" do %>
+      <div class="fields-search ml-3">
+          <%= text_field_tag :job_name,
+            params[:query],
+            class: "form-control",
+            placeholder: "Enter job title", value: @job_name_value %>
+        </div>
+
+        <div class="fields-search">
+          <%= select(:query, :city, @job_cities, include_blank: "City", selected: @job_cities_value ? @job_cities_value : "") %>
+        </div>
+
+        <div class="fields-search">
+          <%= select(:query, :department, @job_categories, selected: @job_categories_value ? @job_categories_value : "", include_blank: "Department") %>
+        </div>
+
+        <div class="fields-search">
+          <%= submit_tag "Search", class: "btn btn-lw" %>
+        </div>
+
       <% end %>
   	</div>
 	</div>
