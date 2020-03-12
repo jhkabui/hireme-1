@@ -270,6 +270,7 @@ job13 = Job.create!(
   title: "Product Manager",
   location: "Berlin",
   description: "The Product Manager is a key role within LeWagons’s Automation department and supports project management and operations.
+
 • You analyze the processes in Finance, backed by process mining, and develop recommendations to senior stakeholders for optimizations of the same.
 
 • You are responsible for the Design, Specification and Management of the delivery of Warehouse Control System and Material Flow Control Systems as an integrative part of our system landscape
@@ -315,6 +316,7 @@ job14 = Job.create!(
 • Experience with React, Android and iOS App development and AWS is a plus"
   )
 
+
 user1 = User.create!(
   first_name: "Carolin",
   last_name: "Janssen",
@@ -335,5 +337,18 @@ Admin = User.create!(
   password: "adminadmin",
   admin: true
   )
+
+application1 = Application.new(
+  accepted: false,
+  created_at: 8.days.ago,
+  job: job14,
+  user: user1,
+  status: 3,
+  )
+
+file = URI.open('https://www.newtimes.co.rw/sites/default/files/styles/mystyle/public/main/articles/2015/11/18/1447873393o-GRANDPARENTS-facebook.jpg')
+application1.letter_of_motivation.attach(io: file, filename: 'test.jpg', content_type: 'image/jpg')
+
+application1.save!
 
 puts 'seeds done'
