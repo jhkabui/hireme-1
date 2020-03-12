@@ -340,7 +340,7 @@ Admin = User.create!(
 
 application1 = Application.new(
   accepted: false,
-  created_at: 4.days.since,
+  created_at: 8.days.ago,
   job: job14,
   user: user1,
   status: 3,
