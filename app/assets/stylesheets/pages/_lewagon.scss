@@ -46,6 +46,9 @@
 
 .card-body {
   -ms-flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
@@ -72,7 +75,7 @@
   font-weight: bolder;
   background-color: white;
   text-shadow:none;
- } 
+ }
 
 .btn-lw {
 	background: #fd1015;
