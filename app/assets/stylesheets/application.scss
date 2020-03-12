@@ -18,6 +18,11 @@
 @import "components/header_picture";
 @import "components/footer";
 @import "components/rating";
+@import "components/container-portrait";
+@import "components/card-portrait";
+@import "components/overlay-portrait";
+
+
 @import "pages/index";
 @import "pages/home";
 @import "pages/job";
@@ -36,8 +41,10 @@ canvas {
 	font-weight: 300;
 }
 
+
 #home-form {
   width: 100%;
   display: flex;
   justify-content: left;
 }
+
