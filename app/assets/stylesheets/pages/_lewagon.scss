@@ -20,7 +20,12 @@
 .banner h1, .header-font {
 	font-size: 3rem;
 	font-family: $new-font;
-	margin-bottom: 20px;
+}
+
+.banner {
+  background-position: left; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 150%;
 }
 
 .section-title {
@@ -46,6 +51,9 @@
 
 .card-body {
   -ms-flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
@@ -72,7 +80,7 @@
   font-weight: bolder;
   background-color: white;
   text-shadow:none;
- } 
+ }
 
 .btn-lw {
 	background: #fd1015;

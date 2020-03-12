@@ -5,7 +5,6 @@ class CreateApplications < ActiveRecord::Migration[5.2]
       t.string :status
       t.text :extra_step
       t.boolean :accepted
-      t.text :letter_of_motivation
 
       t.timestamps
     end
