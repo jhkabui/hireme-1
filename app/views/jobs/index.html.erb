@@ -3,22 +3,22 @@
   <div class="row">
       <%= form_tag jobs_path, method: :get, id: "our-form" do %>
 
-        <div class="col-md-3">
+        <div class="fields-search">
           <%= text_field_tag :job_name,
             params[:query],
             class: "form-control",
             placeholder: "Enter job title", value: @job_name_value %>
         </div>
 
-        <div class="col-md-1 mr-4">
+        <div class="fields-search">
           <%= select(:query, :city, @job_cities, include_blank: "City", selected: @job_cities_value ? @job_cities_value : "") %>
         </div>
 
-        <div class="col-md-3">
+        <div class="fields-search">
           <%= select(:query, :department, @job_categories, selected: @job_categories_value ? @job_categories_value : "", include_blank: "Department") %>
         </div>
 
-        <div class="col-md-2 ml-0">
+        <div class="fields-search">
           <%= submit_tag "Search", class: "btn btn-lw" %>
         </div>
 

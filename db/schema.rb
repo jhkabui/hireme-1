@@ -58,15 +58,6 @@ ActiveRecord::Schema.define(version: 2020_03_09_142324) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "steps", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.bigint "jobs_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["jobs_id"], name: "index_steps_on_jobs_id"
-  end
-
   create_table "user_jobs", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "job_id"

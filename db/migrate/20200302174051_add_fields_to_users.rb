@@ -7,5 +7,6 @@ class AddFieldsToUsers < ActiveRecord::Migration[5.2]
     add_column :users, :address, :text
     add_column :users, :grade_point_average, :float
     add_column :users, :highest_education_attained, :string
+    add_column :users, :admin, :boolean, default: false, null: false
   end
 end
