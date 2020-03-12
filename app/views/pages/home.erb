@@ -34,10 +34,12 @@
     <div class="card mr-3">
         <div class="card-body">
           <h3 class="card-title text-left"> <%= job.title %></h3>
-          <h4 class="card-text"> <i class="fas fa-map-marker-alt mr-1"> </i><%=job.location%></h4>
-          <h5> <%=job.category%> Department</h5>
           <div>
-            <%= link_to 'More Info', job_path(job), class: "btn mt-4" %>
+            <h4 class="card-text"> <i class="fas fa-map-marker-alt mr-1"> </i><%=job.location%></h4>
+            <h5> <%=job.category%> Department</h5>
+            <div>
+              <%= link_to 'More Info', job_path(job), class: "btn mt-4" %>
+            </div>
           </div>
         </div>
       </div>
