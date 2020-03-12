@@ -14,7 +14,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <% if application.status == 'Accepted' && current_user.admin == false %>
-                       <p class= "badge badge-pill text-center confeti"><%= application.status %></p>
+                       <p class= "badge badge-pill text-center text-white confeti"><%= application.status %></p>
                       <% else %>
                        <p class= "badge badge-pill text-center"><%= application.status %></p>
                       <% end %>

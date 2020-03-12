@@ -1,10 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="/">
+  <a class="navbar-brand" href="/lewagon">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
   </a>
-  <%# link_to root_path, class: "navbar-brand pt-0" do %>
-<!-- <h6><i class="logo_navbar mt-0 mb-1"> HireMe! </i></h6> -->
-    <%# end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,7 +11,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "HireMe", hireme_path, class: "nav-link" %>
+          <%= link_to "HireMe", root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Search", jobs_path, class: "nav-link" %>
